@@ -50,3 +50,34 @@ In this example:
 `https://example.com` is the base URL to scan.
 endpoints.txt is a file containing the endpoints to test, one per line (e.g., /api/users, /api/orders, etc.).
 The -v flag enables verbose mode, which shows more detailed error messages.
+
+---
+
+## output example
+
+```
+bash API_responder.sh target.txt endpoints.txt
+===================================================================>>>> https://vapi.app
+[+] /swagger/index.html -> GET -> https://vapi.app/swagger/index.html
+[+] /swagger/v1/swagger.json -> GET -> https://vapi.app/swagger/v1/swagger.json
+[!] /api/v1/account/register/user -> POST -> [401] Bearer needed
+[!] /api/v1/account/register/staff -> POST -> [401] Bearer needed
+[!] /api/v1/account/delete/user/{email} -> DELETE -> [401] Bearer needed
+[!] /api/v1/account/mobile/user/password -> PUT -> [401] Bearer needed
+[!] /api/v1/client/newclient -> POST -> [401] Bearer needed
+[!] /api/v1/login/allpermissions -> GET -> [401] Bearer needed
+[!] /api/v1/login/acceptterms -> POST -> [401] Bearer needed
+[+] /api/v1/Wall -> GET -> https://vapi.app/api/v1/Wall
+[+] /api/v1/Wall -> POST -> https://vapi.app/api/v1/Wall
+[+] /api/v1/Wall -> PUT -> https://vapi.app/api/v1/Wall
+[+] /api/v1/UserMember -> GET -> https://vapi.app/api/v1/UserMember
+[+] /api/v1/UserMember -> PUT -> https://vapi.app/api/v1/UserMember
+[!] /api/v1/Receiver/communicationEvents -> POST -> [401] Bearer needed
+[!] /api/v1/Receiver/lockEvents -> POST -> [401] Bearer needed
+[!] /api/v1/Receiver/scan -> POST -> [401] Bearer needed
+[!] /api/v1/Receiver/ocsConfigurations -> POST -> [401] Bearer needed
+[!] /api/v1/Receiver/lockEvents -> POST -> [401] Bearer needed
+[+] /api/v1/Client -> GET -> https://vapi.app/api/v1/Client
+[+] /api/v1/Client -> POST -> https://vapi.app/api/v1/Client
+[+] /api/v1/Client -> PUT -> https://vapi.app/api/v1/Client
+```
