@@ -14,7 +14,7 @@ It then sends a request to the full URL using curl with the following options:
 -is shows the response headers and status code.
 -X specifies the HTTP method (e.g., GET, POST, etc.).
 -H sets the Accept header to application/ld+json.
-The response status code is extracted using head -n 1 and awk '{print $2}'.
+The response status code is extracted using `head -n 1` and `awk '{print $2}'`.
 Depending on the response status code, the function prints a message in a specific color:
 - If the status code is 200, it prints a green message indicating the endpoint is accessible.
 - If the status code is 401, it prints a yellow message indicating that a Bearer token is required.
@@ -42,11 +42,11 @@ An optional -v flag to enable verbose mode, which shows more detailed error mess
 Example usage:
 
 ```
-bash metodo.sh https://example.com endpoints.txt -v
+bash API_responder.sh https://example.com endpoints.txt -v
 ```
 
 In this example:
 
-https://example.com is the base URL to scan.
+`https://example.com` is the base URL to scan.
 endpoints.txt is a file containing the endpoints to test, one per line (e.g., /api/users, /api/orders, etc.).
 The -v flag enables verbose mode, which shows more detailed error messages.
