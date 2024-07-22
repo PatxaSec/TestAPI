@@ -22,7 +22,7 @@ API_Scan() {
                 printf "${yellowColour}[!] ${end} -> ${metodo} -> [401] Bearer needed ${endColour}\n"
             else
                 if [[ -n "$v" ]]; then
-                    printf "${redColour}[!] ${end} -> ${metodo} -> [${RESPONSE}] ${endColour}\n"
+                    printf "${redColour}[x] ${end} -> ${metodo} -> [${RESPONSE}] ${endColour}\n"
                 fi
             fi
         done
