@@ -18,7 +18,7 @@ The response status code is extracted using `head -n 1` and `awk '{print $2}'`.
 Depending on the response status code, the function prints a message in a specific color:
 - If the status code is 200, it prints a green message indicating the endpoint is accessible.
 - If the status code is 401, it prints a yellow message indicating that a Bearer token is required.
-- If the status code is anything else, it prints a red message indicating an error, but only if the -v flag is provided (more on this later).
+- If the status code is anything else, it prints a red message indicating an error, but only if the `v` flag is provided (more on this later).
 
 ---
 
