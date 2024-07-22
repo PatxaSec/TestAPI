@@ -38,18 +38,18 @@ To use this script, you'll need to provide the following arguments:
 
 The URL or file containing URLs to scan.
 The file containing the endpoints to test (e.g., /api/users, /api/orders, etc.).
-An optional -v flag to enable verbose mode, which shows more detailed error messages.
+An optional `v` flag to enable verbose mode, which shows more detailed error messages.
 Example usage:
 
 ```
-bash API_responder.sh https://example.com endpoints.txt -v
+bash API_responder.sh https://example.com endpoints.txt v
 ```
 
 In this example:
 
 `https://example.com` is the base URL to scan.
 endpoints.txt is a file containing the endpoints to test, one per line (e.g., /api/users, /api/orders, etc.).
-The -v flag enables verbose mode, which shows more detailed error messages.
+The `v` flag enables verbose mode, which shows more detailed error messages.
 
 ---
 
