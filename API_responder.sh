@@ -19,7 +19,7 @@ API_Scan() {
             if [[ $RESPONSE == 200 ]]; then
                 printf "${greenColour}[+] ${end} -> ${metodo} -> ${FULL} ${endColour}\n"
             elif [[ $RESPONSE == 401 ]]; then
-                printf "${yellowColour}[!] ${end} -> ${metodo} -> [401] Bearer needed ${endColour}\n"
+                printf "${yellowColour}[!] ${end} -> ${metodo} -> [401] AUTH needed ${endColour}\n"
             else
                 if [[ -n "$v" ]]; then
                     printf "${redColour}[x] ${end} -> ${metodo} -> [${RESPONSE}] ${endColour}\n"
@@ -30,9 +30,9 @@ API_Scan() {
 }
 
 if [ -f "$1" ]; then
-    for i in $(cat targets); do
+    for test in $(cat targets); do
         echo "===================================================================>>>>" $i
-        API_Scan $i
+        API_Scan $test
     done
 else
     echo "===================================================================>>>>" $1
